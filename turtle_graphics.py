@@ -2,7 +2,7 @@ import turtle as tt
 from random import randint, sample
 
 def draw():
-	size = randint(40, 300)
+	size = randint(50, 300)
 	angles = (144, 150, 157.5, 160, 165)
 	angle = sample(angles, 1)[0]
 	
