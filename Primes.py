@@ -23,24 +23,18 @@ print(primeList)
 #-------------------------------------------------------------
 # prime number calculator: find the first n primes
 
-count = int(input("Find how many primes?: "))
-primeList = []
-x = 2
+i = 1
+x = int(input("Enter the number:"))
+for k in range(1, x+1):
+    c = 0
+    for j in range(1, i+1):
+        a = i%j
+        if a==0:
+            c = c + 1
 
-while len(primeList) < count:
-	isPrime = True
-	index = 0
-	root = int(x ** 0.5) + 1
-	
-	while index < len(primeList) and primeList[index] <= root:
-		if x % primeList[index] == 0:
-			isPrime = False
-			break
-		index += 1
-			
-	if isPrime:
-		primeList.append(x)
-		
-	x += 1
-		
-print(primeList)
+    if c == 2:
+        print(i)
+    else:
+        k = k - 1
+
+    i = i + 1
